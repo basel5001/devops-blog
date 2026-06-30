@@ -1,0 +1,62 @@
+site_name: XOps Blog
+site_url: https://basel5001.github.io/devops-blog
+site_author: Basel Mohamed
+site_description: DevOps, Cloud, and Platform Engineering insights
+
+repo_name: basel5001/devops-blog
+repo_url: https://github.com/basel5001/devops-blog
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: green
+      accent: green
+      toggle:
+        icon: material/brightness-4
+        name: Light mode
+    - scheme: default
+      primary: green
+      accent: green
+      toggle:
+        icon: material/brightness-7
+        name: Dark mode
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - navigation.top
+    - search.suggest
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+  - blog:
+      blog_dir: .
+      post_date_format: long
+  - tags
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/basel5001
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/basel-mohamed-alam/
+
+nav:
+  - Blog:
+    - index.md
